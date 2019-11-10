@@ -1,0 +1,13 @@
+version: '3'
+services:
+  clash:
+    container_name: clash
+    build: .
+    volumes:
+      - ./config.yaml:/root/.config/clash/config.yaml
+    ports:
+      - "6667:7890"
+      - "6668:7891"
+      - "6653:53/udp"
+    restart: always
+    network_mode: "bridge"
