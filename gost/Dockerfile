@@ -1,6 +1,6 @@
 FROM golang:alpine as builder
 
-RUN apk add git
+RUN apk add --no-cache git
 
 WORKDIR /go/src/github.com/ginuerzh
 

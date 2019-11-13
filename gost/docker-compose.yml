@@ -1,5 +1,4 @@
 version: "3"
-
 services:
   gost:
     container_name: gost
