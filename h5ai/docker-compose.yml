@@ -6,7 +6,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - /var/www/h5ai:/h5ai
-      - ./options.json:/options.json
+      - /tmp/h5ai:/var/www
+      - ./options.json:/usr/share/h5ai/_h5ai/private/conf/options.json
     restart: always
     network_mode: "bridge"
