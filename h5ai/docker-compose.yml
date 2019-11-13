@@ -1,0 +1,12 @@
+version: "3"
+services:
+  h5ai:
+    container_name: h5ai
+    build: .
+    ports:
+      - 8080:80
+    volumes:
+      - /var/www/h5ai:/h5ai
+      - ./options.json:/options.json
+    restart: always
+    network_mode: "bridge"
