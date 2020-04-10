@@ -10,6 +10,7 @@ FROM alpine:latest
 
 RUN apk update && apk add libc-utils util-linux libstdc++
 
+COPY --from=builder /tmp/xupnpd2/www /www
 COPY --from=builder /tmp/xupnpd2/xupnpd /xupnpd
 
 VOLUME /media
